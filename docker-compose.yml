@@ -1,0 +1,6 @@
+﻿services:
+  localization.example.webapi:
+    image: localization.example.webapi
+    build:
+      context: .
+      dockerfile: Localization.Example.WebApi/Dockerfile
