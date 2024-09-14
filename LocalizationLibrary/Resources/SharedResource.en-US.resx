@@ -18,7 +18,6 @@
         </xsd:element>
     </xsd:schema>
 
-    <!-- Çevirilere yer veriyoruz -->
     <data name="GreetingMessage" xml:space="preserve">
     <value>Hello! Welcome to our system.</value>
   </data>
