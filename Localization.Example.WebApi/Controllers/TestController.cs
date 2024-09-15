@@ -1,3 +1,4 @@
+using LocalizationLibrary;
 using LocalizationLibrary.Resources;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
@@ -26,7 +27,7 @@ public class TestController : ControllerBase
         }
         else
         {
-            message = _localizer["Common.NotFoundEntity"];
+            message = _localizer[LocalizationKeys.Common.NotFoundEntity];
         }
         
         return Ok(new { message });
@@ -37,9 +38,9 @@ public class TestController : ControllerBase
     {
         if (name.Length > 5)
         {
-            return Ok(_localizer["GreetingMessage"].Value);
+            return Ok(_localizer[LocalizationKeys.GreetingMessage].Value);
         }
         
-        return BadRequest(_localizer["DynamicMessage", "Name", 5].Value);
+        return BadRequest(_localizer[LocalizationKeys.DynamicMessage, "Name", 5].Value);
     }
 }
