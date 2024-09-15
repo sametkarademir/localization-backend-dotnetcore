@@ -26,9 +26,20 @@ public class TestController : ControllerBase
         }
         else
         {
-            message = _localizer["ErrorMessage"];
+            message = _localizer["Common.NotFoundEntity"];
         }
         
         return Ok(new { message });
+    }
+    
+    [HttpGet("dynamic/{name}")]
+    public IActionResult GetDynamic(string name)
+    {
+        if (name.Length > 5)
+        {
+            return Ok(_localizer["GreetingMessage"].Value);
+        }
+        
+        return BadRequest(_localizer["DynamicMessage", "Name", 5].Value);
     }
 }

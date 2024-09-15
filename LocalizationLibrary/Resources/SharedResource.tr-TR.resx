@@ -24,4 +24,7 @@
     <data name="ErrorMessage" xml:space="preserve">
     <value>Beklenmedik bir hata oluştu. Litfen daha sonra tekrar deneyin.</value>
   </data>
+    <data name="DynamicMessage" xml:space="preserve">
+        <value>{0} değerinin minimum uzunluğu {1} olmalıdır.</value>
+    </data>
 </root>
